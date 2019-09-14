@@ -9,6 +9,8 @@ import ztc.com.smart.devic.bee.base.AbstractProxyFragment;
 
 /**
  * 设备初始化页面
+ *
+ * @author jonesleborn
  */
 public class DeviceInitFragment extends AbstractProxyFragment {
 

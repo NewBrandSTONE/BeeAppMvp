@@ -33,5 +33,6 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     // FastJson
     implementation 'com.alibaba:fastjson:1.1.71.android'
+    // 公共库
     implementation project(path: ':library_common')
 }

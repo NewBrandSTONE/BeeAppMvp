@@ -2,16 +2,19 @@ package ztc.com.smart.devic.bee.ui.init;
 
 import android.util.Log;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.TypeReference;
-import com.young.android.library.common.constants.BeeUrlConstant;
 import com.young.android.library.common.models.base.BaseResponse;
-import com.zhy.http.okhttp.callback.Callback;
+
+import java.lang.reflect.Type;
 
 import okhttp3.Call;
-import okhttp3.Response;
-import ztc.com.smart.devic.bee.beans.DeviceInfo;
+import ztc.com.smart.devic.bee.base.callback.AbstractBeeHttpCallback;
+import ztc.com.smart.devic.bee.beans.BeeDeviceInfo;
 
+/**
+ * 设备信息P层
+ *
+ * @author jonesleborn
+ */
 public class DeviceInitPresenter {
 
     private static final String LOG_TAG = "deviceP";
@@ -26,32 +29,31 @@ public class DeviceInitPresenter {
 
     public void setApplicationDeviceInfo() {
         view.showLoading();
-        model.loadDeviceInfo(new Callback<BaseResponse<DeviceInfo>>() {
+        model.loadDeviceInfo(new AbstractBeeHttpCallback<BeeDeviceInfo>() {
             @Override
-            public BaseResponse<DeviceInfo> parseNetworkResponse(Response response, int id) throws Exception {
-                if (response.body() == null) {
-                    return null;
-                }
+            public void onHandleError(Call call, Exception e, int id) {
+                view.hideLoading();
 
-                String res = response.body().string();
-                return JSON.parseObject(res, new TypeReference<BaseResponse<DeviceInfo>>() {
-                });
+                // 处理视图层异常逻辑
+                Log.e(LOG_TAG, "onHandleError: ", e.getCause());
             }
 
             @Override
-            public void onError(Call call, Exception e, int id) {
-                Log.e(LOG_TAG, "onError: ", e);
+            public void onHandleResponseSuccess(BeeDeviceInfo deviceInfo, int id) {
+                view.hideLoading();
+
+                // 处理视图层正常逻辑
+                Log.d(LOG_TAG, "onHandleResponseSuccess: " + deviceInfo);
             }
 
             @Override
-            public void onResponse(BaseResponse<DeviceInfo> response, int id) {
-                if (response == null) {
-                    return;
-                }
+            public void onHandleResponseError(BaseResponse<BeeDeviceInfo> response) {
+                Log.e(LOG_TAG, "onHandleResponseError: " + response.getMsg());
+            }
 
-                if (BeeUrlConstant.SUCCESS_CODE.equals(response.getCode())) {
-                    // 请求成功
-                }
+            @Override
+            public Type getActualType() {
+                return BeeDeviceInfo.class;
             }
         });
     }

@@ -10,7 +10,16 @@ import com.zhy.http.okhttp.callback.Callback;
 
 import okhttp3.MediaType;
 
+/**
+ * Http请求工具类
+ *
+ * @author jonesleborn
+ */
 public class HttpClientUtil {
+
+    private HttpClientUtil() {
+
+    }
 
     private static final String TAG = "HttpClientUtil";
 
@@ -25,8 +34,8 @@ public class HttpClientUtil {
      */
     public static void postJson(String url, Object jsonContent, Callback callback) {
 
-        BaseRequest<String> baseRequest = new BaseRequest<>();
-        baseRequest.setData(JSON.toJSONString(jsonContent));
+        BaseRequest<Object> baseRequest = new BaseRequest<>();
+        baseRequest.setData(jsonContent);
         baseRequest.setReqId(getReqId());
 
         String jsonPostData = JSON.toJSONString(baseRequest);

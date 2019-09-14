@@ -5,7 +5,11 @@ import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
+import com.young.android.library.common.constants.BeeUrlConstant;
+import com.young.android.library.common.models.base.BaseResponse;
 import com.zhy.http.okhttp.callback.Callback;
+
+import java.lang.reflect.Type;
 
 import okhttp3.Call;
 import okhttp3.Response;
@@ -17,12 +21,12 @@ import okhttp3.ResponseBody;
  * @author O.z Young
  * @version 2019-09-14
  */
-public abstract class AbstractBeeHttpCallback<T> extends Callback<T> {
+public abstract class AbstractBeeHttpCallback<T> extends Callback<BaseResponse<T>> {
 
     private static final String LOG_TAG = "BeeCallback";
 
     @Override
-    public T parseNetworkResponse(Response response, int id) throws Exception {
+    public BaseResponse<T> parseNetworkResponse(Response response, int id) throws Exception {
 
         if (response == null) {
             return null;
@@ -34,13 +38,14 @@ public abstract class AbstractBeeHttpCallback<T> extends Callback<T> {
         }
 
         String string = body.string();
-        if (TextUtils.isDigitsOnly(string)) {
+        if (TextUtils.isEmpty(string)) {
             return null;
         }
 
-        return JSON.parseObject(string, new TypeReference<T>() {
-        });
+        Log.d(LOG_TAG, "parseNetworkResponse: " + string);
 
+        return JSON.parseObject(string, new TypeReference<BaseResponse<T>>(getActualType()) {
+        });
     }
 
     @Override
@@ -50,13 +55,17 @@ public abstract class AbstractBeeHttpCallback<T> extends Callback<T> {
     }
 
     @Override
-    public void onResponse(T response, int id) {
+    public void onResponse(BaseResponse<T> response, int id) {
 
         if (response == null) {
             return;
         }
 
-        onHandleResponse(response, id);
+        if (BeeUrlConstant.SUCCESS_CODE.equals(response.getCode())) {
+            onHandleResponseSuccess(response.getData(), id);
+        } else {
+            onHandleResponseError(response);
+        }
     }
 
     /**
@@ -66,7 +75,7 @@ public abstract class AbstractBeeHttpCallback<T> extends Callback<T> {
      * @param e    Excepiton
      * @param id   id
      */
-    abstract void onHandleError(Call call, Exception e, int id);
+    public abstract void onHandleError(Call call, Exception e, int id);
 
     /**
      * 处理响应结果
@@ -74,5 +83,19 @@ public abstract class AbstractBeeHttpCallback<T> extends Callback<T> {
      * @param response response
      * @param id       id
      */
-    abstract void onHandleResponse(T response, int id);
+    public abstract void onHandleResponseSuccess(T response, int id);
+
+    /**
+     * 处理错误信息
+     *
+     * @param response response
+     */
+    public abstract void onHandleResponseError(BaseResponse<T> response);
+
+    /**
+     * 获取实际的类型
+     *
+     * @return type
+     */
+    public abstract Type getActualType();
 }
