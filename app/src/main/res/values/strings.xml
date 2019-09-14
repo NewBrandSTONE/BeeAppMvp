@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BeeAppMVP</string>
+    <string name="lbn_loading_dialog_message">&#8230;加载中</string>
+    <string name="lbn_device_init_message">设备初始化中</string>
+</resources>
