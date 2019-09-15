@@ -44,6 +44,7 @@ public class DeviceInitPresenter {
 
                 // 处理视图层正常逻辑
                 Log.d(LOG_TAG, "onHandleResponseSuccess: " + deviceInfo);
+                view.setContentTextView(deviceInfo.getDeviceNo());
             }
 
             @Override

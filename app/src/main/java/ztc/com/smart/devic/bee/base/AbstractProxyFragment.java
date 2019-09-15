@@ -15,6 +15,12 @@ public abstract class AbstractProxyFragment extends SupportFragment implements I
 
     private View mRootView;
 
+    /**
+     * 绑定视图时的回调方法
+     *
+     * @param saveInstanceState
+     * @param rootView
+     */
     protected abstract void onBindView(@Nullable Bundle saveInstanceState, View rootView);
 
     @Nullable

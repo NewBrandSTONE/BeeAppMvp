@@ -12,6 +12,8 @@ import ztc.com.smart.devic.bee.widgets.dialog.LBNLoadingDialog;
 
 /**
  * 抽象类Activity
+ *
+ * @author jonesleborn
  */
 public abstract class AbstractProxyActivity extends SupportActivity
         implements IBaseView {
@@ -38,11 +40,6 @@ public abstract class AbstractProxyActivity extends SupportActivity
         if (savedInstanceState == null) {
             loadRootFragment(R.id.delegate_container, setRootDelegate());
         }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
     }
 
     @Override
