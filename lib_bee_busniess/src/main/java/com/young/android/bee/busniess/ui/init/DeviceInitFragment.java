@@ -1,4 +1,4 @@
-package ztc.com.smart.devic.bee.ui.init;
+package com.young.android.bee.busniess.ui.init;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,8 +6,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
-import ztc.com.smart.devic.bee.R;
-import ztc.com.smart.devic.bee.base.AbstractProxyFragment;
+import com.young.android.bee.busniess.R;
+import com.young.android.bee.busniess.ui.base.AbstractProxyFragment;
 
 /**
  * 设备初始化页面

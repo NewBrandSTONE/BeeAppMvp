@@ -1,4 +1,4 @@
-package ztc.com.smart.devic.bee.base.callback;
+package com.young.android.bee.lib.network.callback;
 
 import android.text.TextUtils;
 import android.util.Log;

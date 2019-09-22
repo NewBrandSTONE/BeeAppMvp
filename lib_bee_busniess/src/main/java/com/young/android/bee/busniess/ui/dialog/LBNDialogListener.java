@@ -1,4 +1,4 @@
-package ztc.com.smart.devic.bee.widgets.dialog;
+package com.young.android.bee.busniess.ui.dialog;
 
 public interface LBNDialogListener {
 

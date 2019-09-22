@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 
 def configInfo = rootProject.ext.android
 def libsInfo = rootProject.ext.libs
+def thirdLibsInfo = rootProject.ext.thridLibs
 
 android {
     compileSdkVersion configInfo.compileSdkVersion
@@ -32,4 +33,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // okhttp
+    implementation thirdLibsInfo.okhttp
+    implementation thirdLibsInfo.okhttpUtils
+    // Fragment切换
+    implementation thirdLibsInfo.fragmentation
+    // network
+    implementation project(path: libsInfo.network)
+    // common
+    implementation project(path: libsInfo.common)
 }

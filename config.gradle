@@ -4,18 +4,29 @@ ext {
             minSdkVersion    : 19,
             targetSdkVersion : 28,
             versionCode      : 1,
-            versionName      : "0.0.1"
+            versionName      : "0.0.1",
+            applicationId    : "ztc.com.smart.devic.bee"
     ]
 
     libVersions = [
-            appcompatV7: "28.0.0"
+            appcompatV7  : "28.0.0",
+            okhttpUtils  : "2.6.2",
+            okhttp       : "3.11.0",
+            fastJson     : "1.1.71",
+            fragmentation: "1.3.7"
     ]
 
     libs = [
-            appcompat: "com.android.support:appcompat-v7:${libVersions.appcompatV7}"
+            appcompat: "com.android.support:appcompat-v7:${libVersions.appcompatV7}",
+            common   : ":lib_common",
+            busniess : ":lib_bee_busniess",
+            network  : ":lib_network"
     ]
 
     thridLibs = [
-            fastJson: ""
+            fastJson     : "com.alibaba:fastjson:${libVersions.fastJson}.android",
+            okhttpUtils  : "com.zhy:okhttputils:${libVersions.okhttpUtils}",
+            okhttp       : "com.squareup.okhttp3:okhttp:${libVersions.okhttp}",
+            fragmentation: "me.yokeyword:fragmentation:${libVersions.fragmentation}"
     ]
 }

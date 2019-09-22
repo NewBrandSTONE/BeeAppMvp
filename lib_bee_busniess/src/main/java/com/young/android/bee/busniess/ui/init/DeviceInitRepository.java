@@ -1,10 +1,10 @@
-package ztc.com.smart.devic.bee.ui.init;
+package com.young.android.bee.busniess.ui.init;
 
+import com.young.android.bee.lib.network.utils.HttpClientUtil;
 import com.young.android.lib.common.constants.BeeUrlConstant;
 import com.young.android.lib.common.models.init.DeviceInitRequest;
 import com.zhy.http.okhttp.callback.Callback;
 
-import ztc.com.smart.devic.bee.utils.HttpClientUtil;
 
 /**
  * 设备信息获取类

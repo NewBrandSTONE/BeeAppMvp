@@ -1,14 +1,14 @@
-package ztc.com.smart.devic.bee.ui.init;
+package com.young.android.bee.busniess.ui.init;
 
 import android.util.Log;
 
+import com.young.android.bee.lib.network.callback.AbstractBeeHttpCallback;
+import com.young.android.lib.common.beans.BeeDeviceInfo;
 import com.young.android.lib.common.models.base.BaseResponse;
 
 import java.lang.reflect.Type;
 
 import okhttp3.Call;
-import ztc.com.smart.devic.bee.base.callback.AbstractBeeHttpCallback;
-import ztc.com.smart.devic.bee.beans.BeeDeviceInfo;
 
 /**
  * 设备信息P层

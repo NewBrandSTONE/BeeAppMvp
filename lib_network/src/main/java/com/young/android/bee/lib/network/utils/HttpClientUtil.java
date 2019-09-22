@@ -1,4 +1,4 @@
-package ztc.com.smart.devic.bee.utils;
+package com.young.android.bee.lib.network.utils;
 
 import android.os.SystemClock;
 import android.util.Log;

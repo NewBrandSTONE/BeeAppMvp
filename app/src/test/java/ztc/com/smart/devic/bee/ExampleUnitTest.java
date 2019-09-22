@@ -6,7 +6,7 @@ import com.young.android.lib.common.models.base.BaseResponse;
 
 import org.junit.Test;
 
-import ztc.com.smart.devic.bee.beans.BeeDeviceInfo;
+import com.young.android.lib.common.beans.BeeDeviceInfo;
 
 import static org.junit.Assert.assertEquals;
 

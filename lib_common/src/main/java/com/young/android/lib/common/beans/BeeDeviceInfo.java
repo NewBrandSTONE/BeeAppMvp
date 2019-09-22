@@ -1,4 +1,4 @@
-package ztc.com.smart.devic.bee.beans;
+package com.young.android.lib.common.beans;
 
 import com.young.android.lib.common.models.base.BaseModel;
 

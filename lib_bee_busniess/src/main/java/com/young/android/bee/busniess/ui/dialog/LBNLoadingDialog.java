@@ -1,4 +1,4 @@
-package ztc.com.smart.devic.bee.widgets.dialog;
+package com.young.android.bee.busniess.ui.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -9,7 +9,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import ztc.com.smart.devic.bee.R;
+import com.young.android.bee.busniess.R;
+
 
 public class LBNLoadingDialog extends Dialog {
 

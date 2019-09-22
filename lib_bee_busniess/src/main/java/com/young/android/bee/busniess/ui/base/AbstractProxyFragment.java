@@ -1,4 +1,4 @@
-package ztc.com.smart.devic.bee.base;
+package com.young.android.bee.busniess.ui.base;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

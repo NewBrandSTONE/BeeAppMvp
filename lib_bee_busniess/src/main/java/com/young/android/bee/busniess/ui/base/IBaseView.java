@@ -1,4 +1,4 @@
-package ztc.com.smart.devic.bee.base;
+package com.young.android.bee.busniess.ui.base;
 
 /**
  * 给BaseActivity使用的规定的方法

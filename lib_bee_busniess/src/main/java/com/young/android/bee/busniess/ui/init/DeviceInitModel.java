@@ -1,4 +1,4 @@
-package ztc.com.smart.devic.bee.ui.init;
+package com.young.android.bee.busniess.ui.init;
 
 
 import com.zhy.http.okhttp.callback.Callback;

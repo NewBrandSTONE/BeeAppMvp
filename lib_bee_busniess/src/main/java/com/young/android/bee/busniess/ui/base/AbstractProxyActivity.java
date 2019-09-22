@@ -1,14 +1,15 @@
-package ztc.com.smart.devic.bee.base;
+package com.young.android.bee.busniess.ui.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.FrameLayout;
 
+import com.young.android.bee.busniess.R;
+import com.young.android.bee.busniess.ui.dialog.LBNLoadingDialog;
+
 import me.yokeyword.fragmentation.SupportActivity;
 import me.yokeyword.fragmentation.anim.DefaultNoAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
-import ztc.com.smart.devic.bee.R;
-import ztc.com.smart.devic.bee.widgets.dialog.LBNLoadingDialog;
 
 /**
  * 抽象类Activity
