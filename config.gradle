@@ -1,0 +1,21 @@
+ext {
+    android = [
+            compileSdkVersion: 28,
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "0.0.1"
+    ]
+
+    libVersions = [
+            appcompatV7: "28.0.0"
+    ]
+
+    libs = [
+            appcompat: "com.android.support:appcompat-v7:${libVersions.appcompatV7}"
+    ]
+
+    thridLibs = [
+            fastJson: ""
+    ]
+}

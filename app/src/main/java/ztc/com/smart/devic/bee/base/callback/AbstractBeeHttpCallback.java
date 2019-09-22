@@ -5,8 +5,8 @@ import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
-import com.young.android.library.common.constants.BeeUrlConstant;
-import com.young.android.library.common.models.base.BaseResponse;
+import com.young.android.lib.common.constants.BeeUrlConstant;
+import com.young.android.lib.common.models.base.BaseResponse;
 import com.zhy.http.okhttp.callback.Callback;
 
 import java.lang.reflect.Type;

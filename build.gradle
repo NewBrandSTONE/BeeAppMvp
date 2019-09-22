@@ -1,3 +1,6 @@
+// 指定全局配置文件
+apply from: this.rootProject.file("config.gradle")
+
 buildscript {
     repositories {
         maven {

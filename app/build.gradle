@@ -34,5 +34,5 @@ dependencies {
     // FastJson
     implementation 'com.alibaba:fastjson:1.1.71.android'
     // 公共库
-    implementation project(path: ':library_common')
+    implementation project(path: ':lib_common')
 }

@@ -2,7 +2,7 @@ package ztc.com.smart.devic.bee.ui.init;
 
 import android.util.Log;
 
-import com.young.android.library.common.models.base.BaseResponse;
+import com.young.android.lib.common.models.base.BaseResponse;
 
 import java.lang.reflect.Type;
 

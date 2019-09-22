@@ -2,7 +2,7 @@ package ztc.com.smart.devic.bee;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
-import com.young.android.library.common.models.base.BaseResponse;
+import com.young.android.lib.common.models.base.BaseResponse;
 
 import org.junit.Test;
 

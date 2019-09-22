@@ -1,7 +1,7 @@
 package ztc.com.smart.devic.bee.ui.init;
 
-import com.young.android.library.common.constants.BeeUrlConstant;
-import com.young.android.library.common.models.init.DeviceInitRequest;
+import com.young.android.lib.common.constants.BeeUrlConstant;
+import com.young.android.lib.common.models.init.DeviceInitRequest;
 import com.zhy.http.okhttp.callback.Callback;
 
 import ztc.com.smart.devic.bee.utils.HttpClientUtil;

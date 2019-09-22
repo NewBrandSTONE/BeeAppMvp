@@ -1,6 +1,6 @@
 package ztc.com.smart.devic.bee.beans;
 
-import com.young.android.library.common.models.base.BaseModel;
+import com.young.android.lib.common.models.base.BaseModel;
 
 /**
  * 设备信息
