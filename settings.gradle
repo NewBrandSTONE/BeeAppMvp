@@ -1,1 +1,1 @@
-include ':app', ':lib_common', ':lib_ui', ':lib_network', ':lib_image_loader', ':lib_qrcode'
+include ':app', ':lib_common', ':lib_ui', ':lib_network', ':lib_image_loader', ':lib_qrcode', ':lib_bee_busniess', ':lib_bee_print'
