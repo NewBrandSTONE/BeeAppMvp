@@ -35,8 +35,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     // okhttp
-    implementation thirdLibsInfo.okhttpUtils
-    implementation thirdLibsInfo.okhttp
+    api thirdLibsInfo.okhttpUtils
+    api thirdLibsInfo.okhttp
 
     // FastJson
     implementation thirdLibsInfo.fastJson
